@@ -338,6 +338,10 @@
                 cursor: pointer;
             }
         }
+
+        .modal-dialog {
+         margin-top: 200px;
+        }
     </style>
 </head>
 
@@ -418,4 +422,3 @@
         </nav>
 
     </header>
-

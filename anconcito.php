@@ -4,25 +4,23 @@
 <div class="page">
 
 
-  <div class="alert">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="myModalLabel">¡Atención!</h5>
+
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          Para regresar al Home principal, de click en el logo de Santa Elena
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <!-- Swiper-->
