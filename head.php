@@ -418,3 +418,169 @@
 
 
     </header>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade mt-5 position-fixed"   id="staticBackdropLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-2" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="fa fa-close" style="background: none; font-size:20px; border:none;color:black; cursor:pointer;"  data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form  method="post" id="Login" autocomplete="off">
+                    <span style="color: red;font-size: 10px;margin-bottom: 5px;text-align: center;font-weight: 500;"><?php if(isset($errorLogin)){   echo $errorLogin;} ?></span>
+
+          <div class="mb-3">
+      <label for="" class=""> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
+
+           <input type="text" class="form-control" name="user" id="user" placeholder="Usuario">
+          </div>
+
+          <div class="mb-3">
+                    <label for="" class=""> <i class="fa-solid fa-key"></i>Contraseña</label>
+            <input type="text" class="form-control" name="contrasenia" id="contrasenia" placeholder="contrasenia">
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-white " style="background:#6c757d; border-radius:5px;" data-bs-toggle="modal" data-bs-target="#staticBackdropRegistro" >crear Cuenta</button>
+          <button type="submit" class="btn  text-white " style="background:#0d6efd; border-radius:5px;">Ingresar</button>
+
+        
+      </div>
+      <div id="alerta__info"> </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade " id="staticBackdropRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5" id="staticBackdropLabel">Registro </h5>
+      </div>
+      <div class="modal-body">
+        <form  method="post" id="Registro" autocomplete="off" >
+          <div class="mb-3">
+              <label for="" class=""> <i class="fa fa-user-circle" aria-hidden="true"></i> Nombres Completo</label>
+            <input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="emailHelpId" placeholder="Nombres Completos">
+          </div>
+          
+          <div class="mb-3">
+              <label for="" class=""> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
+           <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
+          </div>
+
+          <div class="mb-3">
+              <label for="" class=""> <i class="fa fa-key" aria-hidden="true"></i> contraseña</label>
+            <input type="text" class="form-control" name="psw" id="psw" aria-describedby="emailHelpId" placeholder="Contraseña">
+          </div>
+
+          <div class="mb-3">
+              <label for="" class=""> <i class="fa fa-envelope" aria-hidden="true"></i> Correo electronico</label>
+            <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="Correo">
+          </div>
+          
+          <div class="mb-3">
+            <label for="" class=""> <i class="fa fa-calendar" aria-hidden="true"></i> Fecha Nacimiento</label>
+            <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="emailHelpId" placeholder="">
+          </div>
+
+
+          <select class="form-control mb-3" name="ciudad" id="ciudad"  aria-label="Default select example" onchange="mostrarProvincia()">
+            <option selected>seleccione pais de origen</option>
+            <?php  
+                  include_once '../models/db.php';
+
+                $sql = "SELECT * FROM pais ";
+                mysqli_set_charset($conexion, "utf8mb4");
+                $result = $conexion->query($sql);
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                 
+            ?>
+              <option value="<?php  echo $row['id'];?>"  ><?php   echo  $row['nombre'];  ?></option>
+           
+            <?php
+                    }
+                    
+                 }  
+                 
+                 
+              ?>
+               
+          </select>
+          
+        <select class="form-control mb-3" name="provincia" id="provincia"  aria-label="Default select example" style="display:none">
+             <option value=0  selected>seleccione Provincia de origen</option>
+           
+            <?php  
+                $sql = "SELECT * FROM provincia ";
+                mysqli_set_charset($conexion, "utf8mb4");
+                $result = $conexion->query($sql);
+                if ($result->num_rows > 0) {
+                // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                 
+                    
+            ?>
+              <option value="<?php  echo $row['id'];?>"  ><?php   echo  $row['nombre']; ?></option>                  
+            <?php
+                    }
+                 }  
+                 
+              ?>
+               
+          </select>
+          
+          <script>
+                function mostrarProvincia() {
+                    var paisSeleccionado = document.getElementById("ciudad").value;
+                    if (paisSeleccionado == "52") { // Cambiar "52" por el ID del país específico
+                        document.getElementById("provincia").style.display = "block";
+                    } else {
+                        document.getElementById("provincia").style.display = "none";
+                    }
+                }
+                </script>
+
+
+          <style>
+            .contenedor28{
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+          </style>
+          <div class="mb-3 contenedor28 ">
+            <label for="" class=""> <i class="fa fa-venus-mars" aria-hidden="true"></i> Sexo</label>       
+            <div class="form-group">
+              <input id="gender_M" class="" type="radio" name="gender" value="M" checked>
+              <label for="my-input">Hombre</label>
+            </div>      
+            <div class="form-group">
+              <input id="gender_F" class="" type="radio" name="gender" value="F">
+              <label for="my-input">Mujer</label>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+  
+
+              
+            <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdropLogin" style="background:#6c757d; border-radius:5px;">regresar</button>
+            <button type="submit" class="btn text-white" style="background:#0d6efd; border-radius:5px;">Crear Cuenta</button>
+          </div>
+              <div id="alerta__error" ></div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

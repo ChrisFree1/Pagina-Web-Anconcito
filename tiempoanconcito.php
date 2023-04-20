@@ -25,8 +25,18 @@
         </script>
     </section>
 
+    <br><br><br><br><br>
 
 
+
+    <div style="padding: 45px;" class="tituloPrincipal wow fadeInRight bloqueo ">
+
+        <h2>Tiempo actual</h2>
+        <div id="ww_d7b5af8b5b696" v='1.3' loc='id' a='{"t":"horizontal","lang":"es","sl_lpl":1,"ids":["wl11086"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Weather Data Source: <a href="https://sharpweather.com/weather_santa_elena_province/30_days/" id="ww_d7b5af8b5b696_u" target="_blank">Weather forecast Santa Elena Province 30 days</a></div>
+        <script async src="https://app1.weatherwidget.org/js/?id=ww_d7b5af8b5b696"></script>
+
+
+    </div>
 
 
 
