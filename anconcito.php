@@ -2,7 +2,29 @@
 
 
 <div class="page">
-  
+
+
+  <div class="alert">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Swiper-->
   <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
     <div class="swiper-wrapper text-left">
@@ -51,44 +73,44 @@
 
   <br>
   <br>
-  
-      <!-- Section Box Categories-->
-      <section class="section section-lg section-top-1 bg-gray-4" >
-        
-      
-        <!-- Discover New Horizons-->
-        
-            
-            <div class="px-4 py-5 my-5 text-center container-fluid" >
-              <h2 style="text-align: center;color:#122638">Acerca de...</h2>
-              <hr  class="w-50 d-block d-ms-none mx-auto" style="border-bottom: 3px solid #01b3a7; margin-bottom:35px;"> 
-              <div class="row align-items-center">
-                <div class="col-lg-8 text-center">
-                  <p class="lead mb-4" style="font-size: 20px; ">
-                  Los antiguos pobladores desde sus inicios se interesaron por la pesca, utilizando la balsa
-                                            como principal instrumento de navegación. <br><br>En la actualidad, la parroquia Anconcito se
-                                            ha convertido en un pueblo pesquero, con una gran variedad de embarcaciones: barcos,
-                                            fibras, botes, pangas y canoas, lo cual evidencia que la pesca se ha convertido en una de
-                                            las principales fuentes de riqueza de este territorio.</p>
-            
-                  </p>
-                  <div class="product-big-price-wrap"><span class="product-big-price"></span></div>
-                </div>
-                <div class="col-lg-3 btn-acercade">
-                  <a class="d-flex justify-content-center button button-black-outline button-ujarak mx-auto " href="acercaanconcito.php" >Descubre un poco más</a>
-                </div>
-                
-              </div>
-            </div>
-      </section>
 
-      <br><br><br>
-  
+  <!-- Section Box Categories-->
+  <section class="section section-lg section-top-1 bg-gray-4">
+
+
+    <!-- Discover New Horizons-->
+
+
+    <div class="px-4 py-5 my-5 text-center container-fluid">
+      <h2 style="text-align: center;color:#122638">Acerca de...</h2>
+      <hr class="w-50 d-block d-ms-none mx-auto" style="border-bottom: 3px solid #01b3a7; margin-bottom:35px;">
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-center">
+          <p class="lead mb-4" style="font-size: 20px; ">
+            Los antiguos pobladores desde sus inicios se interesaron por la pesca, utilizando la balsa
+            como principal instrumento de navegación. <br><br>En la actualidad, la parroquia Anconcito se
+            ha convertido en un pueblo pesquero, con una gran variedad de embarcaciones: barcos,
+            fibras, botes, pangas y canoas, lo cual evidencia que la pesca se ha convertido en una de
+            las principales fuentes de riqueza de este territorio.</p>
+
+          </p>
+          <div class="product-big-price-wrap"><span class="product-big-price"></span></div>
+        </div>
+        <div class="col-lg-3 btn-acercade">
+          <a class="d-flex justify-content-center button button-black-outline button-ujarak mx-auto " href="acercaanconcito.php">Descubre un poco más</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <br><br><br>
+
 
   <section class="section section-sm bg-default">
     <div class="container">
       <div class=" wow fadeInRight">
-       <h3 >¿Qué visitar en Anconcito?</h3>
+        <h3>¿Qué visitar en Anconcito?</h3>
 
       </div>
 
@@ -165,10 +187,10 @@
 
 
   <section class="cuestionario">
-      <div class=" wow fadeInRight">
-       <h3 >¿Qué hacer en Anconcito?</h3>
+    <div class=" wow fadeInRight">
+      <h3>¿Qué hacer en Anconcito?</h3>
 
-      </div>
+    </div>
     <br>
     <br>
     <div class="contenedor">
